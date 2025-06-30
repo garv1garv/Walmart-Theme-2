@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walmart AI Stylist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+        }
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9; /* slate-100 */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1; /* slate-300 */
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8; /* slate-400 */
+        }
+        /* Simple transition for view switching */
+        .view {
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        .view.hidden {
+            opacity: 0;
+            transform: scale(0.98);
+            pointer-events: none;
+            position: absolute;
+            width: 100%;
+            left: -9999px; /* Move off-screen */
+        }
+         .view:not(.hidden) {
+            position: static;
+            width: auto;
+            left: auto;
+        }
+        /* Custom loader */
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3b82f6; /* blue-500 */
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="antialiased text-slate-800">
+
+    <div id="app-container" class="max-w-lg mx-auto bg-white min-h-screen shadow-2xl flex flex-col">
+
+        <!-- Header -->
+        <header class="bg-blue-600 text-white p-4 flex items-center justify-between sticky top-0 z-20 shadow-md">
+            <div class="flex items-center space-x-2">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-yellow-300"><path d="M12 2L15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2z"></path></svg>
+                 <h1 class="text-xl font-bold">Walmart AI Stylist</h1>
+            </div>
+            <div class="flex items-center space-x-1">
+                <button id="settings-btn" class="p-2 rounded-full hover:bg-blue-700 transition">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                </button>
+                <button id="home-button" class="p-2 rounded-full hover:bg-blue-700 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="flex-grow p-4 relative overflow-y-auto">
+
+            <!-- Catalog View -->
+            <div id="catalog-view" class="view">
+                <!-- AI Shopping Assistant -->
+                <div class="mb-6 bg-slate-50 p-4 rounded-xl shadow-sm">
+                     <label for="ai-search" class="block text-lg font-semibold mb-2 text-slate-700">AI Shopping Assistant</label>
+                     <p class="text-sm text-slate-500 mb-3">Try: "comfy sofa under ₹30000" or "a jacket for a wedding"</p>
+                    <div class="flex space-x-2">
+                        <input type="text" id="ai-search" class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="How can I help you find?">
+                        <button id="ai-search-btn" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition shadow">Search</button>
+                    </div>
+                     <div id="search-loader" class="hidden mt-4 flex justify-center"><div class="loader"></div></div>
+                </div>
+                
+                 <!-- Visual Search -->
+                <div class="mb-6 bg-slate-50 p-4 rounded-xl shadow-sm">
+                    <label for="visual-search-input" class="block text-lg font-semibold mb-2 text-slate-700">Visual Search ("Shop the Look")</label>
+                    <p class="text-sm text-slate-500 mb-3">Upload a photo of an outfit or room to find similar items.</p>
+                    <input type="file" id="visual-search-input" accept="image/*" class="block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"/>
+                    <div id="visual-search-loader" class="hidden mt-4 flex justify-center"><div class="loader"></div></div>
+                </div>
+
+                <h2 id="catalog-title" class="text-2xl font-bold mb-4 text-slate-800"></h2>
+                <div id="product-grid" class="grid grid-cols-2 gap-4">
+                    <!-- Product cards will be injected here -->
+                </div>
+            </div>
+
+            <!-- Product Detail View -->
+            <div id="product-view" class="view hidden">
+                 <!-- Back Button -->
+                 <button id="back-to-catalog" class="flex items-center space-x-2 text-blue-600 font-semibold mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                    <span>Back to Products</span>
+                </button>
+
+                <div id="product-details" class="space-y-6">
+                    <!-- Product details will be injected here -->
+                </div>
+            </div>
+            
+            <!-- AR View (With AI Analysis) -->
+            <div id="ar-view" class="view hidden">
+                <button id="back-to-product" class="flex items-center space-x-2 text-blue-600 font-semibold mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                    <span>Back to Product</span>
+                </button>
+                <div class="text-center mb-4">
+                     <h3 class="text-2xl font-bold">AR Environmental Analysis</h3>
+                     <p class="text-slate-500">AI is analyzing how this product fits in your space...</p>
+                </div>
+                
+                <div class="mb-4">
+                    <img id="ar-room-image" src="" alt="User's Room" class="w-full rounded-lg shadow-md aspect-video object-cover"/>
+                </div>
+
+                <div id="ar-loader" class="flex justify-center my-8"><div class="loader"></div></div>
+
+                <div id="ar-analysis-results" class="hidden space-y-4">
+                    <!-- AI Analysis will be injected here -->
+                </div>
+            </div>
+            
+             <!-- Message Modal -->
+            <div id="message-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+                <div class="bg-white rounded-lg shadow-xl p-6 max-w-sm w-full text-center">
+                    <p id="modal-message" class="text-slate-700 mb-4"></p>
+                    <button id="modal-close-btn" class="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition">OK</button>
+                </div>
+            </div>
+            
+            <!-- API Key Modal -->
+            <div id="api-key-modal" class="hidden fixed inset-0 bg-black bg-opacity-60 z-50 flex items-center justify-center p-4">
+                <div class="bg-white rounded-lg shadow-xl p-6 max-w-md w-full">
+                    <h3 class="text-xl font-bold mb-2">Enter your Google AI API Key</h3>
+                    <p class="text-slate-600 mb-4 text-sm">To use the AI-powered features of this app, please provide your own Google AI API Key. You can get one from Google AI Studio.</p>
+                    <input type="password" id="api-key-input" class="w-full px-4 py-2 border border-slate-300 rounded-lg mb-4" placeholder="Enter API Key here...">
+                    <button id="save-api-key-btn" class="bg-blue-600 text-white w-full px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition">Save and Continue</button>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bg-white/80 backdrop-blur-sm border-t border-slate-200 p-2 flex justify-around sticky bottom-0 z-20">
+            <button data-category="home" class="nav-btn flex-1 flex flex-col items-center p-2 rounded-lg transition text-blue-600">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-1"><path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9"/><path d="M9 22V12h6v10"/><path d="M2 10.6L12 3l10 7.6"/></svg>
+                <span class="text-xs font-semibold">Home Goods</span>
+            </button>
+            <button data-category="wearables" class="nav-btn flex-1 flex flex-col items-center p-2 rounded-lg transition text-slate-500">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-1"><path d="M21 16a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2zM12 2v20"/><path d="m6 10 2-2 2 2"/><path d="m14 10 2-2 2 2"/></svg>
+                <span class="text-xs font-semibold">Wearables</span>
+            </button>
+        </nav>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // --- DOM Elements ---
+            const app = {
+                views: {
+                    catalog: document.getElementById('catalog-view'),
+                    product: document.getElementById('product-view'),
+                    ar: document.getElementById('ar-view'),
+                },
+                navButtons: document.querySelectorAll('.nav-btn'),
+                productGrid: document.getElementById('product-grid'),
+                productDetails: document.getElementById('product-details'),
+                catalogTitle: document.getElementById('catalog-title'),
+                backToCatalogBtn: document.getElementById('back-to-catalog'),
+                homeButton: document.getElementById('home-button'),
+                settingsButton: document.getElementById('settings-btn'),
+                aiSearchInput: document.getElementById('ai-search'),
+                aiSearchBtn: document.getElementById('ai-search-btn'),
+                searchLoader: document.getElementById('search-loader'),
+                visualSearchInput: document.getElementById('visual-search-input'),
+                visualSearchLoader: document.getElementById('visual-search-loader'),
+                modal: {
+                    container: document.getElementById('message-modal'),
+                    message: document.getElementById('modal-message'),
+                    closeBtn: document.getElementById('modal-close-btn'),
+                },
+                apiKeyModal: {
+                    container: document.getElementById('api-key-modal'),
+                    input: document.getElementById('api-key-input'),
+                    saveBtn: document.getElementById('save-api-key-btn'),
+                },
+                ar: {
+                    backBtn: document.getElementById('back-to-product'),
+                    roomImage: document.getElementById('ar-room-image'),
+                    loader: document.getElementById('ar-loader'),
+                    resultsContainer: document.getElementById('ar-analysis-results'),
+                }
+            };
+            
+            // --- State ---
+            let state = {
+                currentCategory: 'home',
+                products: [],
+                selectedProductId: null,
+                apiKey: '',
+            };
+
+            // --- Mock Data ---
+            const mockData = {
+                home: [
+                    { id: 'h001', name: 'Modern Velvet Sofa', price: 28999, image: 'https://placehold.co/400x400/3b82f6/ffffff?text=Sofa', styleTags: ['modern', 'sofa', 'velvet', 'blue'], reviews: ['Incredibly comfortable and stylish.', 'The color is a bit darker than pictured, but I love it.', 'Assembly was tricky. Not very comfortable.'] },
+                    { id: 'h002', name: 'Minimalist Coffee Table', price: 8499, image: 'https://placehold.co/400x400/10b981/ffffff?text=Table', styleTags: ['minimalist', 'table', 'wood'], reviews: ['Perfect size for my small living room.', 'Solid wood, great quality for the price.', 'Came with a small scratch on the top.'] },
+                    { id: 'h003', name: 'Bohemian Rattan Chair', price: 12500, image: 'https://placehold.co/400x400/f97316/ffffff?text=Chair', styleTags: ['bohemian', 'chair', 'rattan', 'ethnic'], reviews: ['Adds such a warm, natural feel to the room.', 'Surprisingly sturdy and comfortable.', 'A bit overpriced for what it is.'] },
+                    { id: 'h004', name: 'Large Jute Rug', price: 6999, image: 'https://placehold.co/400x400/6366f1/ffffff?text=Rug', styleTags: ['jute', 'rug', 'natural', 'bohemian'], reviews: ['Looks amazing and feels durable.', 'Sheds a lot initially, but gets better over time.', 'The texture is rougher than I expected.'] },
+                ],
+                wearables: [
+                    { id: 'w001', name: 'Classic Denim Jacket', price: 2499, image: 'https://placehold.co/400x400/0ea5e9/ffffff?text=Jacket', styleTags: ['classic', 'denim', 'jacket', 'casual'], reviews: ['A timeless piece, fits perfectly.', 'The denim is high quality and has a nice weight.', 'The buttons feel a bit loose.'] },
+                    { id: 'w002', name: 'Silk Bandhani Saree', price: 7999, image: 'https://placehold.co/400x400/ec4899/ffffff?text=Saree', styleTags: ['ethnic', 'saree', 'silk', 'wedding', 'traditional'], reviews: ['The colors are so vibrant and beautiful!', 'Perfect for a festive occasion.', 'The fabric is a little stiff.'] },
+                    { id: 'w003', name: 'Men\'s Nehru Jacket', price: 3200, image: 'https://placehold.co/400x400/8b5cf6/ffffff?text=Nehru+Jacket', styleTags: ['ethnic', 'nehru', 'jacket', 'formal', 'wedding', 'traditional'], reviews: ['Elegant and well-fitted. Received many compliments.', 'The material is breathable and comfortable.', 'The sizing runs a bit small.'] },
+                    { id: 'w004', name: 'Aviator Sunglasses', price: 1800, image: 'https://placehold.co/400x400/f59e0b/ffffff?text=Sunglasses', styleTags: ['accessory', 'sunglasses', 'aviator', 'modern'], reviews: ['Great style and provides good sun protection.', 'Lightweight and comfortable to wear all day.', 'The frame feels a bit flimsy.'] },
+                ]
+            };
+            const SIMULATED_ROOM_IMAGE_URL = 'https://placehold.co/800x600/f3f4f6/6b7280?text=Your+Modern+Living+Room';
+
+            // --- API Configuration ---
+            const getGeminiUrl = () => `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${state.apiKey}`;
+            const getImagenUrl = () => `https://generativelanguage.googleapis.com/v1beta/models/imagen-3.0-generate-002:predict?key=${state.apiKey}`;
+
+            // --- View Management ---
+            const switchView = (viewId) => {
+                Object.values(app.views).forEach(view => view.classList.add('hidden'));
+                if (app.views[viewId]) {
+                    app.views[viewId].classList.remove('hidden');
+                }
+            };
+            
+            // --- Modal ---
+            const showModal = (message) => {
+                app.modal.message.textContent = message;
+                app.modal.container.classList.remove('hidden');
+            };
+            
+            const showApiKeyModal = () => {
+                app.apiKeyModal.container.classList.remove('hidden');
+            };
+            
+            const saveApiKey = () => {
+                const key = app.apiKeyModal.input.value.trim();
+                if (key) {
+                    state.apiKey = key;
+                    localStorage.setItem('walmart-ai-stylist-apikey', key);
+                    app.apiKeyModal.container.classList.add('hidden');
+                    showModal("API Key saved successfully!");
+                } else {
+                    showModal("Please enter a valid API key.");
+                }
+            };
+            
+            // --- Rendering Functions ---
+            const renderCatalog = (productsToRender) => {
+                app.catalogTitle.textContent = state.currentCategory === 'home' ? 'Home Goods' : 'Wearables';
+                app.productGrid.innerHTML = '';
+                productsToRender.forEach(product => {
+                    const card = document.createElement('div');
+                    card.className = 'bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden transform hover:scale-105 transition-transform duration-300';
+                    card.innerHTML = `
+                        <img src="${product.image}" alt="${product.name}" class="w-full h-40 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x400/cbd5e1/ffffff?text=Image+Not+Found';">
+                        <div class="p-4">
+                            <h3 class="font-semibold text-slate-800 truncate">${product.name}</h3>
+                            <p class="text-slate-600 font-bold mt-1">₹${product.price.toLocaleString('en-IN')}</p>
+                            <button data-id="${product.id}" class="view-product-btn w-full mt-3 bg-blue-100 text-blue-700 font-semibold py-2 rounded-lg hover:bg-blue-200 transition">View</button>
+                        </div>
+                    `;
+                    app.productGrid.appendChild(card);
+                });
+            };
+
+            const renderProductDetails = () => {
+                const product = state.products.find(p => p.id === state.selectedProductId);
+                if (!product) return;
+
+                app.productDetails.innerHTML = `
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                        <img src="${product.image}" alt="${product.name}" class="w-full h-64 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x400/cbd5e1/ffffff?text=Image+Not+Found';">
+                        <div class="p-6 space-y-4">
+                            <h2 class="text-3xl font-bold text-slate-900">${product.name}</h2>
+                            <p class="text-2xl font-bold text-blue-600">₹${product.price.toLocaleString('en-IN')}</p>
+                            
+                            <!-- AR Visualizer -->
+                            <div class="pt-4">
+                                <button id="ar-btn" class="w-full flex items-center justify-center space-x-2 bg-purple-600 text-white font-semibold py-3 rounded-lg hover:bg-purple-700 transition shadow-lg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+                                    <span>View in Your Room (AR)</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI Tools Section -->
+                    <div class="space-y-6 mt-6">
+                        <!-- Review Summarizer -->
+                        <div class="bg-slate-50 p-4 rounded-xl shadow-sm">
+                            <h4 class="text-lg font-semibold mb-2 text-slate-700">AI Review Summarizer</h4>
+                            <button id="summarize-reviews-btn" class="bg-slate-200 text-slate-700 font-semibold py-2 px-4 rounded-lg hover:bg-slate-300 transition">Get Pros & Cons</button>
+                            <div id="summarize-loader" class="hidden mt-4 flex justify-center"><div class="loader"></div></div>
+                            <div id="pros-cons-container" class="mt-4 text-sm space-y-2"></div>
+                        </div>
+
+                        <!-- Contextual Styling -->
+                        <div class="bg-slate-50 p-4 rounded-xl shadow-sm">
+                            <h4 class="text-lg font-semibold mb-2 text-slate-700">Contextual Styling for Occasions</h4>
+                            <select id="occasion-select" class="w-full p-2 border border-slate-300 rounded-lg">
+                                <option value="">Select an occasion...</option>
+                                <option value="Diwali Party">Diwali Party</option>
+                                <option value="Formal Office Event">Formal Office Event</option>
+                                <option value="Casual Get-Together">Casual Get-Together</option>
+                                <option value="Wedding Reception">Wedding Reception</option>
+                            </select>
+                            <div id="styling-loader" class="hidden mt-4 flex justify-center"><div class="loader"></div></div>
+                            <div id="styling-advice-container" class="mt-4 text-sm text-slate-600 bg-white p-3 rounded-md"></div>
+                        </div>
+
+                        <!-- Product Co-creation -->
+                        <div class="bg-slate-50 p-4 rounded-xl shadow-sm">
+                            <h4 class="text-lg font-semibold mb-2 text-slate-700">✨ AI-Assisted Product Innovation</h4>
+                             <p class="text-sm text-slate-500 mb-3">Suggest a change! e.g., "make it green velvet" or "add a floral print"</p>
+                            <div class="flex space-x-2">
+                                <input type="text" id="cocreate-input" class="w-full px-4 py-2 border border-slate-300 rounded-lg" placeholder="Your idea...">
+                                <button id="cocreate-btn" class="bg-green-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-green-700 transition">Generate</button>
+                            </div>
+                            <div id="cocreate-loader" class="hidden mt-4 flex justify-center"><div class="loader"></div></div>
+                            <div id="cocreate-result" class="mt-4"></div>
+                        </div>
+                    </div>
+                `;
+                addDetailViewListeners();
+                switchView('product');
+            };
+
+            // --- API Call Functions ---
+            
+            const checkApiKey = () => {
+                if (!state.apiKey) {
+                    showModal("Please set your Google AI API key in Settings to use this feature.");
+                    showApiKeyModal();
+                    return false;
+                }
+                return true;
+            };
+
+            async function callApi(url, payload) {
+                try {
+                    const response = await fetch(url, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                    if (!response.ok) throw new Error(`API Error: ${response.status} ${response.statusText}`);
+                    return await response.json();
+                } catch (error) {
+                    console.error("Error calling API:", error);
+                    showModal(`API Call Failed: ${error.message}. Please check your API key and network connection.`);
+                    return null;
+                }
+            }
+            
+            async function callGemini(prompt) {
+                if (!checkApiKey()) return `Error: API Key not set.`;
+                const payload = { contents: [{ role: "user", parts: [{ text: prompt }] }] };
+                const result = await callApi(getGeminiUrl(), payload);
+                if (result && result.candidates && result.candidates.length > 0 && result.candidates[0].content && result.candidates[0].content.parts && result.candidates[0].content.parts.length > 0) {
+                    return result.candidates[0].content.parts[0].text;
+                } else {
+                     console.error("Unexpected Gemini response structure:", result);
+                     if (result && result.candidates && result.candidates.length > 0 && result.candidates[0].finishReason === 'SAFETY') {
+                         return "The request was blocked for safety reasons. Please try a different prompt.";
+                     }
+                     return "Sorry, I couldn't generate a response. The result was empty.";
+                }
+            }
+            
+            async function callImagen(prompt) {
+                if (!checkApiKey()) return null;
+                const payload = { instances: [{ prompt: prompt }], parameters: { "sampleCount": 1 } };
+                const result = await callApi(getImagenUrl(), payload);
+                if (result && result.predictions && result.predictions.length > 0 && result.predictions[0].bytesBase64Encoded) {
+                    return `data:image/png;base64,${result.predictions[0].bytesBase64Encoded}`;
+                } else {
+                    console.error("Unexpected Imagen response structure:", result);
+                    return null;
+                }
+            }
+            
+            async function callGeminiVision(prompt, base64ImageData) {
+                if (!checkApiKey()) return "Error: API Key not set.";
+                const payload = {
+                    contents: [{
+                        parts: [
+                            { text: prompt },
+                            { inlineData: { mime_type: "image/png", data: base64ImageData } }
+                        ]
+                    }]
+                };
+                const result = await callApi(getGeminiUrl(), payload);
+                if (result && result.candidates && result.candidates.length > 0 && result.candidates[0].content.parts.length > 0) {
+                   return result.candidates[0].content.parts[0].text;
+                } else {
+                   console.error("Unexpected Gemini Vision response:", result);
+                   return "Could not analyze the image.";
+                }
+            }
+
+            // Helper to fetch an image and convert to base64
+            async function imageUrlToBase64(url) {
+                try {
+                    const response = await fetch(url);
+                    const blob = await response.blob();
+                    return new Promise((resolve, reject) => {
+                        const reader = new FileReader();
+                        reader.onloadend = () => resolve(reader.result.split(',')[1]);
+                        reader.onerror = reject;
+                        reader.readAsDataURL(blob);
+                    });
+                } catch(e) {
+                    console.error("Error fetching image for base64 conversion:", e);
+                    return null;
+                }
+            }
+
+            // --- Feature Logic ---
+            const handleAiSearch = async () => {
+                if (!checkApiKey()) return;
+                const query = app.aiSearchInput.value.trim().toLowerCase();
+                if (!query) return;
+
+                app.searchLoader.classList.remove('hidden');
+                
+                let filtered = state.products;
+                const priceMatch = query.match(/under ₹?(\d+)/);
+                if (priceMatch && priceMatch[1]) {
+                    const price = parseInt(priceMatch[1], 10);
+                    filtered = filtered.filter(p => p.price < price);
+                }
+
+                const keywords = query.replace(/under ₹?(\d+)/, '').trim().split(' ');
+                filtered = filtered.filter(p => keywords.every(kw => p.name.toLowerCase().includes(kw) || p.styleTags.includes(kw)));
+
+                if (filtered.length > 0) {
+                    renderCatalog(filtered);
+                    app.searchLoader.classList.add('hidden');
+                    return;
+                }
+                
+                const productList = state.products.map(p => `id: ${p.id}, name: ${p.name}, tags: ${p.styleTags.join(', ')}, price: ₹${p.price}`).join('; ');
+                const prompt = `From the following product list, find the best match for the query: "${query}". Return only the product ID(s) as a comma-separated list (e.g., "h001,h003"). If no good match is found, return "none". Product list: [${productList}]`;
+
+                const result = await callGemini(prompt);
+                app.searchLoader.classList.add('hidden');
+                
+                if (result && result.toLowerCase() !== 'none' && !result.startsWith('Error')) {
+                    const ids = result.split(',').map(id => id.trim());
+                    const matchedProducts = state.products.filter(p => ids.includes(p.id));
+                    if(matchedProducts.length > 0) {
+                        renderCatalog(matchedProducts);
+                    } else {
+                        showModal(`AI couldn't find a direct match for "${query}". Try a broader search.`);
+                        renderCatalog(state.products);
+                    }
+                } else {
+                    showModal(`Sorry, no results found for "${query}".`);
+                    renderCatalog(state.products);
+                }
+            };
+            
+            const handleVisualSearch = (event) => {
+                if (!checkApiKey()) return;
+                const file = event.target.files[0];
+                if (!file) return;
+
+                const reader = new FileReader();
+                reader.onloadend = async () => {
+                    app.visualSearchLoader.classList.remove('hidden');
+                    const base64data = reader.result.split(',')[1];
+                    
+                    const productList = state.products.map(p => `id: ${p.id}, name: ${p.name}, tags: ${p.styleTags.join(', ')}`).join('; ');
+                    const prompt = `Analyze the uploaded image. Identify the main furniture or apparel item. Based on its style, color, and type, which of the following products from our catalog are the best matches? Return only the product ID(s) as a comma-separated list (e.g., "h001,w002"). If no good match, return "none". Catalog: [${productList}]`;
+
+                    const result = await callGeminiVision(prompt, base64data);
+                    app.visualSearchLoader.classList.add('hidden');
+                    
+                    if (result && result.toLowerCase() !== 'none' && !result.startsWith('Error')) {
+                        const ids = result.split(',').map(id => id.trim());
+                        const matchedProducts = state.products.filter(p => ids.includes(p.id));
+                        if(matchedProducts.length > 0) {
+                            renderCatalog(matchedProducts);
+                            showModal(`Found ${matchedProducts.length} items similar to your photo!`);
+                        } else {
+                            showModal(`AI couldn't find a direct match for the item in your photo.`);
+                        }
+                    } else {
+                        showModal(`Sorry, could not find matching items. Please try another photo.`);
+                    }
+                };
+                reader.readAsDataURL(file);
+            };
+
+            const handleSummarizeReviews = async () => {
+                if (!checkApiKey()) return;
+                const product = state.products.find(p => p.id === state.selectedProductId);
+                const loader = document.getElementById('summarize-loader');
+                const container = document.getElementById('pros-cons-container');
+
+                loader.classList.remove('hidden');
+                container.innerHTML = '';
+
+                const prompt = `Summarize these customer reviews for the product "${product.name}" into a "Pros" and "Cons" list. Format the output with "Pros:" on one line, followed by bullet points (using *), and "Cons:" on another line, followed by bullet points. Reviews: [${product.reviews.join('. ')}]`;
+                
+                const summary = await callGemini(prompt);
+                
+                loader.classList.add('hidden');
+                const htmlSummary = summary
+                    .replace(/Pros:/g, '<strong class="text-green-600">Pros:</strong>')
+                    .replace(/Cons:/g, '<strong class="text-red-600">Cons:</strong>')
+                    .replace(/\* (.*?)(?=\n\*|\n\n|.$)/g, '<li class="ml-4 list-disc">$1</li>')
+                    .replace(/\n/g, '<br>');
+
+                container.innerHTML = `<ul>${htmlSummary}</ul>`;
+            };
+
+            const handleStylingAdvice = async () => {
+                if (!checkApiKey()) return;
+                const product = state.products.find(p => p.id === state.selectedProductId);
+                const occasion = document.getElementById('occasion-select').value;
+                const loader = document.getElementById('styling-loader');
+                const container = document.getElementById('styling-advice-container');
+                
+                if (!occasion) {
+                    container.innerHTML = '';
+                    return;
+                }
+
+                loader.classList.remove('hidden');
+                container.innerHTML = '';
+
+                const prompt = `You are a fashion stylist in India. Provide 2-3 practical and culturally relevant styling tips for a "${product.name}" to be worn or used at a "${occasion}" in India. Keep the tone helpful and concise.`;
+                
+                const advice = await callGemini(prompt);
+                
+                loader.classList.add('hidden');
+                 container.innerHTML = advice.replace(/\n/g, '<br>');
+            };
+
+            const handleCoCreation = async () => {
+                if (!checkApiKey()) return;
+                const product = state.products.find(p => p.id === state.selectedProductId);
+                const userInput = document.getElementById('cocreate-input').value;
+                const loader = document.getElementById('cocreate-loader');
+                const container = document.getElementById('cocreate-result');
+
+                if (!userInput) {
+                    showModal("Please enter your design idea!");
+                    return;
+                }
+
+                loader.classList.remove('hidden');
+                container.innerHTML = '';
+                
+                const refinementPrompt = `Translate this simple product idea into a detailed, photorealistic image generation prompt for an AI. The base product is a "${product.name}". The user's idea is: "${userInput}". The final image should be a high-quality product shot on a plain, light gray studio background.`;
+                
+                const detailedPrompt = await callGemini(refinementPrompt);
+
+                if(detailedPrompt.startsWith('Error')) {
+                    loader.classList.add('hidden');
+                    showModal('Could not refine the prompt. Please try again.');
+                    return;
+                }
+
+                const imageUrl = await callImagen(detailedPrompt);
+                
+                loader.classList.add('hidden');
+                if (imageUrl) {
+                    container.innerHTML = `
+                        <p class="font-semibold mb-2">Your AI-Generated Design:</p>
+                        <img src="${imageUrl}" class="w-full rounded-lg shadow-md" alt="AI generated image of ${product.name}">
+                    `;
+                } else {
+                    showModal("Sorry, the image could not be generated. Please try a different idea.");
+                }
+            };
+            
+            const handleArAnalysis = async () => {
+                if (!checkApiKey()) return;
+                switchView('ar');
+                app.ar.loader.classList.remove('hidden');
+                app.ar.resultsContainer.classList.add('hidden');
+                app.ar.resultsContainer.innerHTML = '';
+                app.ar.roomImage.src = SIMULATED_ROOM_IMAGE_URL;
+
+                const product = state.products.find(p => p.id === state.selectedProductId);
+                const roomImageBase64 = await imageUrlToBase64(SIMULATED_ROOM_IMAGE_URL);
+
+                if (!roomImageBase64) {
+                    app.ar.loader.classList.add('hidden');
+                    app.ar.resultsContainer.innerHTML = '<p class="text-red-500 text-center">Could not load room image for analysis.</p>';
+                    app.ar.resultsContainer.classList.remove('hidden');
+                    return;
+                }
+
+                const catalogList = mockData[state.currentCategory]
+                    .filter(p => p.id !== product.id)
+                    .map(p => `{id: "${p.id}", name: "${p.name}", tags: "${p.styleTags.join(', ')}"}`)
+                    .join('; ');
+
+                const prompt = `You are an expert interior designer. Analyze the user's room from the provided image. The user wants to place a "${product.name}" which has the style tags "${product.styleTags.join(', ')}". 
+                1. First, briefly describe the room's style.
+                2. Second, state if the product is a "Good Fit" or "Poor Fit".
+                3. Third, give a short reason.
+                4. Fourth, if it's a "Poor Fit", look at this catalog: [${catalogList}] and suggest ONE better product by its name. If it's a good fit, say "None".
+                
+                Format the response EXACTLY like this, with each item on a new line:
+                Room Style: [Your description]
+                Fit: [Good Fit/Poor Fit]
+                Reason: [Your one-sentence reason]
+                Suggestion: [Product Name or None]`;
+
+                const analysisResult = await callGeminiVision(prompt, roomImageBase64);
+
+                app.ar.loader.classList.add('hidden');
+
+                const results = {};
+                analysisResult.split('\n').forEach(line => {
+                    const [key, ...value] = line.split(':');
+                    if(key && value.length > 0) {
+                        results[key.trim()] = value.join(':').trim();
+                    }
+                });
+
+                const fitClass = results['Fit'] === 'Good Fit' ? 'text-green-600 bg-green-100' : 'text-red-600 bg-red-100';
+
+                app.ar.resultsContainer.innerHTML = `
+                    <div class="bg-slate-100 p-4 rounded-lg">
+                        <p class="font-semibold">Room Style:</p>
+                        <p class="text-slate-700">${results['Room Style'] || 'N/A'}</p>
+                    </div>
+                     <div class="bg-slate-100 p-4 rounded-lg">
+                        <p class="font-semibold">Compatibility:</p>
+                        <p class="font-bold text-lg px-3 py-1 rounded-full inline-block ${fitClass}">${results['Fit'] || 'N/A'}</p>
+                    </div>
+                     <div class="bg-slate-100 p-4 rounded-lg">
+                        <p class="font-semibold">Reason:</p>
+                        <p class="text-slate-700">${results['Reason'] || 'N/A'}</p>
+                    </div>
+                    ${results['Suggestion'] && results['Suggestion'] !== 'None' ? `
+                     <div class="bg-yellow-100 p-4 rounded-lg border border-yellow-300">
+                        <p class="font-semibold text-yellow-800">💡 Better Suggestion:</p>
+                        <p class="text-slate-700">${results['Suggestion']}</p>
+                    </div>
+                    ` : ''}
+                `;
+                app.ar.resultsContainer.classList.remove('hidden');
+            };
+
+            // --- Event Listeners ---
+            const setupNavListeners = () => {
+                app.navButtons.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        state.currentCategory = btn.dataset.category;
+                        updateApp();
+                        app.navButtons.forEach(b => b.classList.replace('text-blue-600', 'text-slate-500'));
+                        btn.classList.replace('text-slate-500', 'text-blue-600');
+                    });
+                });
+            };
+
+            const setupCatalogListeners = () => {
+                app.productGrid.addEventListener('click', (e) => {
+                    const btn = e.target.closest('.view-product-btn');
+                    if (btn) {
+                        state.selectedProductId = btn.dataset.id;
+                        renderProductDetails();
+                    }
+                });
+            };
+            
+            const addDetailViewListeners = () => {
+                document.getElementById('summarize-reviews-btn')?.addEventListener('click', handleSummarizeReviews);
+                document.getElementById('occasion-select')?.addEventListener('change', handleStylingAdvice);
+                document.getElementById('cocreate-btn')?.addEventListener('click', handleCoCreation);
+                document.getElementById('ar-btn')?.addEventListener('click', handleArAnalysis);
+            };
+
+            app.backToCatalogBtn.addEventListener('click', () => {
+                 updateApp();
+                 switchView('catalog');
+            });
+            app.homeButton.addEventListener('click', () => {
+                updateApp();
+                switchView('catalog');
+            });
+            app.settingsButton.addEventListener('click', showApiKeyModal);
+            app.apiKeyModal.saveBtn.addEventListener('click', saveApiKey);
+            
+            app.aiSearchBtn.addEventListener('click', handleAiSearch);
+            app.aiSearchInput.addEventListener('keypress', (e) => {
+                if(e.key === 'Enter') handleAiSearch();
+            });
+            
+            app.visualSearchInput.addEventListener('change', handleVisualSearch);
+            
+            app.ar.backBtn.addEventListener('click', () => switchView('product'));
+
+            app.modal.closeBtn.addEventListener('click', () => {
+                app.modal.container.classList.add('hidden');
+            });
+
+            // --- Initialization ---
+            const updateApp = () => {
+                state.products = mockData[state.currentCategory];
+                renderCatalog(state.products);
+                switchView('catalog');
+                app.aiSearchInput.value = '';
+            };
+
+            const init = () => {
+                const savedKey = localStorage.getItem('walmart-ai-stylist-apikey');
+                if (savedKey) {
+                    state.apiKey = savedKey;
+                    app.apiKeyModal.input.value = savedKey;
+                } else {
+                    showApiKeyModal();
+                }
+                setupNavListeners();
+                setupCatalogListeners();
+                updateApp();
+            };
+
+            init();
+        });
+    </script>
+</body>
+</html>
