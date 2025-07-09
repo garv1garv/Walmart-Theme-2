@@ -1,0 +1,1052 @@
+[
+  {
+    "id": "WIILAYOK_MODERN_SOFA",
+    "title": "Wiilayok Modern Living Room Sofa",
+    "brand": "WIILAYOK",
+    "description": "Wiilayok Modern Living Room Sofa, Teddy Fabric Upholstered Sofa Couch with Golden Metal Legs, Classic 2-Seater Sofa Comfy Accent Sofa, White.",
+    "tags": ["Clearance", "Modern", "Living Room", "Sofa", "Comfy", "Accent", "Golden Metal Legs"],
+    "category": "Furniture",
+    "price": 299.99,
+    "imageUrl": "https://placehold.co/600x600/8B4513/ffffff?text=Modern+Sofa",
+    "reviews": [
+      { "rating": 5, "user": "Sarah M.", "comment": "Beautiful sofa, very comfortable and stylish!" },
+      { "rating": 4, "user": "Mike R.", "comment": "Great quality for the price, love the golden legs." }
+    ]
+  },
+  {
+    "id": "ANBAZAR_VELVET_SOFA",
+    "title": "Anbazar Modern Velvet Sofa",
+    "brand": "Anbazar",
+    "description": "Anbazar Modern Velvet Sofa, 3-Seater Couch with Rose Golden Metal Legs, Tufted Back Sofa for Living Room, Bedroom, Apartment, Green.",
+    "tags": ["Modern", "Living Room", "Sofa", "Velvet", "3-Seater", "Rose Golden Metal Legs"],
+    "category": "Furniture",
+    "price": 449.99,
+    "imageUrl": "https://placehold.co/600x600/228B22/ffffff?text=Velvet+Sofa",
+    "reviews": [
+      { "rating": 5, "user": "Emma L.", "comment": "Absolutely gorgeous! The velvet is so soft and luxurious." },
+      { "rating": 5, "user": "David K.", "comment": "Perfect for our living room, excellent quality." }
+    ]
+  },
+  {
+    "id": "EALING_TV_STAND",
+    "title": "Ealing Modern TV Stand",
+    "brand": "Ealing",
+    "description": "Ealing Modern TV Stand for TVs up to 65 inch, Mid-Century Modern TV Stand with Storage, Entertainment Center for Living Room, Bedroom, Black.",
+    "tags": ["Modern", "Living Room", "TV Stand", "Entertainment Center", "Storage"],
+    "category": "Furniture",
+    "price": 189.99,
+    "imageUrl": "https://placehold.co/600x600/2F4F4F/ffffff?text=TV+Stand",
+    "reviews": [
+      { "rating": 4, "user": "Jennifer P.", "comment": "Great storage space and looks very modern." },
+      { "rating": 5, "user": "Robert T.", "comment": "Easy to assemble and perfect size for our 55-inch TV." }
+    ]
+  },
+  {
+    "id": "SMART_TV_4K",
+    "title": "Smart TV 55-inch 4K",
+    "brand": "ValueMax",
+    "description": "Breathtaking 4K Ultra HD resolution and High Dynamic Range (HDR).",
+    "tags": ["4K", "Smart TV", "HDR", "Electronics"],
+    "category": "Electronics",
+    "price": 349.99,
+    "imageUrl": "https://placehold.co/600x600/0071ce/ffffff?text=Smart+TV",
+    "reviews": [
+      { "rating": 5, "user": "Anjali P.", "comment": "Amazing picture quality!" },
+      { "rating": 4, "user": "Rohan S.", "comment": "Great TV, but the remote feels a bit cheap." }
+    ]
+  },
+  {
+    "id": "RUNNING_SHOES_MEN",
+    "title": "Men's Running Shoes",
+    "brand": "Aura",
+    "description": "Lightweight and breathable running shoes for comfort and performance.",
+    "tags": ["Shoes", "Running", "Men", "Sport"],
+    "category": "Apparel",
+    "price": 65.0,
+    "imageUrl": "https://placehold.co/600x600/fdbb30/000000?text=Running+Shoes",
+    "reviews": [
+      { "rating": 5, "user": "Vikram C.", "comment": "So comfortable! Feels like running on clouds." },
+      { "rating": 4, "user": "Sunita M.", "comment": "Good shoes, but they run a half size small." }
+    ]
+  },
+  {
+    "id": "WIRELESS_HEADPHONES",
+    "title": "Premium Wireless Headphones",
+    "brand": "SoundMax",
+    "description": "High-quality wireless headphones with active noise cancellation and 30-hour battery life.",
+    "tags": ["Wireless", "Headphones", "Noise Cancellation", "Premium", "Long Battery"],
+    "category": "Electronics",
+    "price": 199.99,
+    "imageUrl": "https://placehold.co/600x600/000000/ffffff?text=Headphones",
+    "reviews": [
+      { "rating": 5, "user": "Alex T.", "comment": "Incredible sound quality and comfort!" },
+      { "rating": 4, "user": "Maria S.", "comment": "Great headphones, noise cancellation works perfectly." }
+    ]
+  },
+  {
+    "id": "GAMING_CHAIR",
+    "title": "Ergonomic Gaming Chair",
+    "brand": "GamePro",
+    "description": "Professional gaming chair with lumbar support, adjustable height, and premium PU leather.",
+    "tags": ["Gaming", "Chair", "Ergonomic", "Adjustable", "Lumbar Support"],
+    "category": "Furniture",
+    "price": 249.99,
+    "imageUrl": "https://placehold.co/600x600/FF0000/ffffff?text=Gaming+Chair",
+    "reviews": [
+      { "rating": 5, "user": "Tyler G.", "comment": "Perfect for long gaming sessions!" },
+      { "rating": 4, "user": "Jessica L.", "comment": "Very comfortable and well-built." }
+    ]
+  },
+  {
+    "id": "COFFEE_MAKER",
+    "title": "Automatic Coffee Maker",
+    "brand": "BrewMaster",
+    "description": "12-cup programmable coffee maker with thermal carafe and auto-shutoff feature.",
+    "tags": ["Coffee", "Automatic", "Programmable", "Thermal Carafe", "Kitchen"],
+    "category": "Home & Kitchen",
+    "price": 89.99,
+    "imageUrl": "https://placehold.co/600x600/8B4513/ffffff?text=Coffee+Maker",
+    "reviews": [
+      { "rating": 5, "user": "Linda M.", "comment": "Makes perfect coffee every time!" },
+      { "rating": 4, "user": "John D.", "comment": "Great value for money, easy to use." }
+    ]
+  },
+  {
+    "id": "YOGA_MAT",
+    "title": "Premium Yoga Mat",
+    "brand": "ZenFit",
+    "description": "Non-slip yoga mat with extra thickness for comfort and superior grip.",
+    "tags": ["Yoga", "Exercise", "Non-slip", "Premium", "Fitness"],
+    "category": "Sports & Fitness",
+    "price": 39.99,
+    "imageUrl": "https://placehold.co/600x600/9932CC/ffffff?text=Yoga+Mat",
+    "reviews": [
+      { "rating": 5, "user": "Amanda R.", "comment": "Perfect grip and very comfortable!" },
+      { "rating": 5, "user": "Chris P.", "comment": "High quality mat, worth every penny." }
+    ]
+  },
+  {
+    "id": "DESK_LAMP",
+    "title": "LED Desk Lamp",
+    "brand": "BrightLight",
+    "description": "Adjustable LED desk lamp with touch control and USB charging port.",
+    "tags": ["LED", "Desk Lamp", "Adjustable", "Touch Control", "USB Charging"],
+    "category": "Home & Kitchen",
+    "price": 45.99,
+    "imageUrl": "https://placehold.co/600x600/FFD700/000000?text=Desk+Lamp",
+    "reviews": [
+      { "rating": 4, "user": "Steve W.", "comment": "Great lighting and the USB port is very convenient." },
+      { "rating": 5, "user": "Rachel K.", "comment": "Perfect for my home office setup." }
+    ]
+  },
+  {
+    "id": "BLUETOOTH_SPEAKER",
+    "title": "Portable Bluetooth Speaker",
+    "brand": "SoundWave",
+    "description": "Waterproof portable Bluetooth speaker with 360-degree sound and 12-hour battery.",
+    "tags": ["Bluetooth", "Portable", "Waterproof", "360-degree Sound", "Long Battery"],
+    "category": "Electronics",
+    "price": 79.99,
+    "imageUrl": "https://placehold.co/600x600/00CED1/ffffff?text=BT+Speaker",
+    "reviews": [
+      { "rating": 5, "user": "Mike B.", "comment": "Amazing sound quality for the size!" },
+      { "rating": 4, "user": "Sarah J.", "comment": "Perfect for outdoor activities." }
+    ]
+  },
+  {
+    "id": "WINTER_JACKET",
+    "title": "Men's Winter Jacket",
+    "brand": "WarmWear",
+    "description": "Insulated winter jacket with water-resistant coating and removable hood.",
+    "tags": ["Winter", "Jacket", "Insulated", "Water-resistant", "Removable Hood"],
+    "category": "Apparel",
+    "price": 129.99,
+    "imageUrl": "https://placehold.co/600x600/2F4F4F/ffffff?text=Winter+Jacket",
+    "reviews": [
+      { "rating": 5, "user": "Tom H.", "comment": "Very warm and comfortable, great quality!" },
+      { "rating": 4, "user": "Mark L.", "comment": "Perfect for cold weather, fits well." }
+    ]
+  },
+  {
+    "id": "KITCHEN_KNIFE_SET",
+    "title": "Professional Kitchen Knife Set",
+    "brand": "ChefPro",
+    "description": "8-piece professional kitchen knife set with wooden block and sharpening steel.",
+    "tags": ["Kitchen", "Knives", "Professional", "8-piece", "Wooden Block"],
+    "category": "Home & Kitchen",
+    "price": 159.99,
+    "imageUrl": "https://placehold.co/600x600/C0C0C0/000000?text=Knife+Set",
+    "reviews": [
+      { "rating": 5, "user": "Chef Maria", "comment": "Excellent quality knives, very sharp!" },
+      { "rating": 4, "user": "Paul R.", "comment": "Great set for home cooking." }
+    ]
+  },
+  {
+    "id": "BACKPACK_LAPTOP",
+    "title": "Laptop Backpack",
+    "brand": "TechCarry",
+    "description": "Water-resistant laptop backpack with multiple compartments and USB charging port.",
+    "tags": ["Laptop", "Backpack", "Water-resistant", "Multiple Compartments", "USB Port"],
+    "category": "Accessories",
+    "price": 69.99,
+    "imageUrl": "https://placehold.co/600x600/000080/ffffff?text=Laptop+Bag",
+    "reviews": [
+      { "rating": 5, "user": "Student Jake", "comment": "Perfect for college, fits everything I need!" },
+      { "rating": 4, "user": "Business Pro", "comment": "Great for business travel." }
+    ]
+  },
+  {
+    "id": "SMART_WATCH",
+    "title": "Fitness Smart Watch",
+    "brand": "FitTech",
+    "description": "Advanced fitness tracker with heart rate monitor, GPS, and 7-day battery life.",
+    "tags": ["Smart Watch", "Fitness", "Heart Rate", "GPS", "Long Battery"],
+    "category": "Electronics",
+    "price": 199.99,
+    "imageUrl": "https://placehold.co/600x600/000000/ffffff?text=Smart+Watch",
+    "reviews": [
+      { "rating": 5, "user": "Fitness Fan", "comment": "Tracks everything perfectly!" },
+      { "rating": 4, "user": "Runner Sam", "comment": "Great for tracking runs and workouts." }
+    ]
+  },
+  {
+    "id": "DINING_TABLE",
+    "title": "Modern Dining Table",
+    "brand": "HomeStyle",
+    "description": "6-seater modern dining table with tempered glass top and chrome legs.",
+    "tags": ["Dining Table", "Modern", "6-seater", "Glass Top", "Chrome Legs"],
+    "category": "Furniture",
+    "price": 399.99,
+    "imageUrl": "https://placehold.co/600x600/C0C0C0/000000?text=Dining+Table",
+    "reviews": [
+      { "rating": 5, "user": "Family Mom", "comment": "Beautiful table, perfect for our family!" },
+      { "rating": 4, "user": "Design Lover", "comment": "Stylish and functional." }
+    ]
+  },
+  {
+    "id": "WIRELESS_MOUSE",
+    "title": "Ergonomic Wireless Mouse",
+    "brand": "ComfortTech",
+    "description": "Ergonomic wireless mouse with precision tracking and long battery life.",
+    "tags": ["Wireless", "Mouse", "Ergonomic", "Precision", "Long Battery"],
+    "category": "Electronics",
+    "price": 29.99,
+    "imageUrl": "https://placehold.co/600x600/808080/ffffff?text=Mouse",
+    "reviews": [
+      { "rating": 4, "user": "Office Worker", "comment": "Very comfortable for long work sessions." },
+      { "rating": 5, "user": "Gamer Pro", "comment": "Great precision and response time." }
+    ]
+  },
+  {
+    "id": "BEDSHEET_SET",
+    "title": "Luxury Bedsheet Set",
+    "brand": "SleepWell",
+    "description": "4-piece luxury bedsheet set made from 100% Egyptian cotton, queen size.",
+    "tags": ["Bedsheet", "Luxury", "Egyptian Cotton", "4-piece", "Queen Size"],
+    "category": "Home & Kitchen",
+    "price": 89.99,
+    "imageUrl": "https://placehold.co/600x600/E6E6FA/000000?text=Bedsheet+Set",
+    "reviews": [
+      { "rating": 5, "user": "Sleep Lover", "comment": "Incredibly soft and comfortable!" },
+      { "rating": 4, "user": "Quality Seeker", "comment": "Great quality cotton, worth the price." }
+    ]
+  },
+  {
+    "id": "PROTEIN_POWDER",
+    "title": "Whey Protein Powder",
+    "brand": "FitNutrition",
+    "description": "Premium whey protein powder with 25g protein per serving, chocolate flavor.",
+    "tags": ["Protein", "Whey", "Fitness", "Chocolate", "25g Protein"],
+    "category": "Health & Beauty",
+    "price": 49.99,
+    "imageUrl": "https://placehold.co/600x600/8B4513/ffffff?text=Protein+Powder",
+    "reviews": [
+      { "rating": 5, "user": "Gym Enthusiast", "comment": "Great taste and mixes well!" },
+      { "rating": 4, "user": "Fitness Trainer", "comment": "Good quality protein, clients love it." }
+    ]
+  },
+  {
+    "id": "WALL_MIRROR",
+    "title": "Decorative Wall Mirror",
+    "brand": "HomeDecor",
+    "description": "Large decorative wall mirror with ornate frame, perfect for living room or bedroom.",
+    "tags": ["Wall Mirror", "Decorative", "Large", "Ornate Frame", "Living Room"],
+    "category": "Home & Kitchen",
+    "price": 119.99,
+    "imageUrl": "https://placehold.co/600x600/FFD700/000000?text=Wall+Mirror",
+    "reviews": [
+      { "rating": 5, "user": "Interior Designer", "comment": "Beautiful mirror, adds elegance to any room!" },
+      { "rating": 4, "user": "Home Owner", "comment": "Great quality and looks expensive." }
+    ]
+  },
+  {
+    "id": "ELECTRIC_KETTLE",
+    "title": "Stainless Steel Electric Kettle",
+    "brand": "QuickBoil",
+    "description": "1.7L stainless steel electric kettle with auto shut-off and boil-dry protection.",
+    "tags": ["Electric Kettle", "Stainless Steel", "1.7L", "Auto Shut-off", "Safety"],
+    "category": "Home & Kitchen",
+    "price": 39.99,
+    "imageUrl": "https://placehold.co/600x600/C0C0C0/000000?text=Electric+Kettle",
+    "reviews": [
+      { "rating": 5, "user": "Tea Lover", "comment": "Boils water quickly and safely!" },
+      { "rating": 4, "user": "Kitchen User", "comment": "Great addition to my kitchen." }
+    ]
+  },
+  {
+    "id": "SUNGLASSES_AVIATOR",
+    "title": "Classic Aviator Sunglasses",
+    "brand": "StyleShade",
+    "description": "Classic aviator sunglasses with UV protection and polarized lenses.",
+    "tags": ["Sunglasses", "Aviator", "UV Protection", "Polarized", "Classic"],
+    "category": "Accessories",
+    "price": 59.99,
+    "imageUrl": "https://placehold.co/600x600/000000/ffffff?text=Sunglasses",
+    "reviews": [
+      { "rating": 5, "user": "Fashion Fan", "comment": "Stylish and great UV protection!" },
+      { "rating": 4, "user": "Outdoor Person", "comment": "Perfect for driving and outdoor activities." }
+    ]
+  },
+  {
+    "id": "VACUUM_CLEANER",
+    "title": "Cordless Vacuum Cleaner",
+    "brand": "CleanMax",
+    "description": "Lightweight cordless vacuum cleaner with powerful suction and multiple attachments.",
+    "tags": ["Vacuum", "Cordless", "Lightweight", "Powerful Suction", "Attachments"],
+    "category": "Home & Kitchen",
+    "price": 179.99,
+    "imageUrl": "https://placehold.co/600x600/FF6347/ffffff?text=Vacuum",
+    "reviews": [
+      { "rating": 5, "user": "Clean Freak", "comment": "Amazing suction power and so convenient!" },
+      { "rating": 4, "user": "Busy Parent", "comment": "Perfect for quick cleanups." }
+    ]
+  },
+  {
+    "id": "WOMENS_DRESS",
+    "title": "Elegant Evening Dress",
+    "brand": "FashionElite",
+    "description": "Elegant black evening dress with lace details and flowing silhouette.",
+    "tags": ["Dress", "Evening", "Elegant", "Black", "Lace Details"],
+    "category": "Apparel",
+    "price": 149.99,
+    "imageUrl": "https://placehold.co/600x600/000000/ffffff?text=Evening+Dress",
+    "reviews": [
+      { "rating": 5, "user": "Fashion Lover", "comment": "Absolutely stunning dress!" },
+      { "rating": 4, "user": "Event Goer", "comment": "Perfect for special occasions." }
+    ]
+  },
+  {
+    "id": "TABLET_10INCH",
+    "title": "10-inch Android Tablet",
+    "brand": "TechPad",
+    "description": "10-inch Android tablet with HD display, 64GB storage, and long battery life.",
+    "tags": ["Tablet", "Android", "10-inch", "HD Display", "64GB Storage"],
+    "category": "Electronics",
+    "price": 199.99,
+    "imageUrl": "https://placehold.co/600x600/000000/ffffff?text=Tablet",
+    "reviews": [
+      { "rating": 4, "user": "Tech User", "comment": "Great tablet for the price!" },
+      { "rating": 5, "user": "Student", "comment": "Perfect for studying and entertainment." }
+    ]
+  },
+  {
+    "id": "OFFICE_CHAIR",
+    "title": "Ergonomic Office Chair",
+    "brand": "WorkComfort",
+    "description": "Ergonomic office chair with lumbar support, adjustable height, and breathable mesh.",
+    "tags": ["Office Chair", "Ergonomic", "Lumbar Support", "Adjustable", "Breathable"],
+    "category": "Furniture",
+    "price": 199.99,
+    "imageUrl": "https://placehold.co/600x600/000080/ffffff?text=Office+Chair",
+    "reviews": [
+      { "rating": 5, "user": "Office Worker", "comment": "So comfortable for long work days!" },
+      { "rating": 4, "user": "Remote Worker", "comment": "Great support and adjustability." }
+    ]
+  },
+  {
+    "id": "SKINCARE_SET",
+    "title": "Anti-Aging Skincare Set",
+    "brand": "GlowSkin",
+    "description": "Complete anti-aging skincare set with cleanser, serum, and moisturizer.",
+    "tags": ["Skincare", "Anti-Aging", "Complete Set", "Cleanser", "Serum"],
+    "category": "Health & Beauty",
+    "price": 89.99,
+    "imageUrl": "https://placehold.co/600x600/FFB6C1/000000?text=Skincare+Set",
+    "reviews": [
+      { "rating": 5, "user": "Beauty Enthusiast", "comment": "Amazing results after just a few weeks!" },
+      { "rating": 4, "user": "Skincare Lover", "comment": "Great value for a complete set." }
+    ]
+  },
+  {
+    "id": "CAMPING_TENT",
+    "title": "4-Person Camping Tent",
+    "brand": "OutdoorPro",
+    "description": "Waterproof 4-person camping tent with easy setup and ventilation system.",
+    "tags": ["Camping", "Tent", "4-Person", "Waterproof", "Easy Setup"],
+    "category": "Sports & Fitness",
+    "price": 129.99,
+    "imageUrl": "https://placehold.co/600x600/228B22/ffffff?text=Camping+Tent",
+    "reviews": [
+      { "rating": 5, "user": "Camper", "comment": "Great tent, kept us dry in heavy rain!" },
+      { "rating": 4, "user": "Outdoor Family", "comment": "Easy to set up and spacious." }
+    ]
+  },
+  {
+    "id": "COOKBOOK",
+    "title": "Healthy Cooking Cookbook",
+    "brand": "HealthyEats",
+    "description": "Comprehensive cookbook with 200+ healthy recipes for everyday cooking.",
+    "tags": ["Cookbook", "Healthy", "200+ Recipes", "Everyday Cooking", "Nutrition"],
+    "category": "Books",
+    "price": 24.99,
+    "imageUrl": "https://placehold.co/600x600/32CD32/ffffff?text=Cookbook",
+    "reviews": [
+      { "rating": 5, "user": "Home Cook", "comment": "So many delicious and healthy recipes!" },
+      { "rating": 4, "user": "Health Conscious", "comment": "Great variety of nutritious meals." }
+    ]
+  },
+  {
+    "id": "WALL_ART",
+    "title": "Modern Abstract Wall Art",
+    "brand": "ArtStudio",
+    "description": "Set of 3 modern abstract canvas prints, perfect for contemporary home decor.",
+    "tags": ["Wall Art", "Abstract", "Canvas Prints", "Set of 3", "Modern"],
+    "category": "Home & Kitchen",
+    "price": 79.99,
+    "imageUrl": "https://placehold.co/600x600/FF69B4/ffffff?text=Wall+Art",
+    "reviews": [
+      { "rating": 5, "user": "Art Lover", "comment": "Beautiful artwork, adds character to my living room!" },
+      { "rating": 4, "user": "Interior Decorator", "comment": "Great quality prints and colors." }
+    ]
+  },
+  {
+    "id": "POWER_BANK",
+    "title": "Portable Power Bank 20000mAh",
+    "brand": "PowerMax",
+    "description": "High-capacity 20000mAh power bank with fast charging and multiple USB ports.",
+    "tags": ["Power Bank", "20000mAh", "Fast Charging", "Multiple Ports", "Portable"],
+    "category": "Electronics",
+    "price": 39.99,
+    "imageUrl": "https://placehold.co/600x600/000000/ffffff?text=Power+Bank",
+    "reviews": [
+      { "rating": 5, "user": "Traveler", "comment": "Charges my phone multiple times, perfect for travel!" },
+      { "rating": 4, "user": "Tech User", "comment": "Great capacity and fast charging." }
+    ]
+  },
+  {
+    "id": "MENS_WALLET",
+    "title": "Leather Men's Wallet",
+    "brand": "LeatherCraft",
+    "description": "Genuine leather bifold wallet with RFID blocking and multiple card slots.",
+    "tags": ["Wallet", "Leather", "RFID Blocking", "Bifold", "Multiple Slots"],
+    "category": "Accessories",
+    "price": 49.99,
+    "imageUrl": "https://placehold.co/600x600/8B4513/ffffff?text=Mens+Wallet",
+    "reviews": [
+      { "rating": 5, "user": "Professional", "comment": "High quality leather and great design!" },
+      { "rating": 4, "user": "Everyday User", "comment": "Perfect size and RFID protection is a plus." }
+    ]
+  },
+  {
+    "id": "PLANT_POT_SET",
+    "title": "Ceramic Plant Pot Set",
+    "brand": "GreenThumb",
+    "description": "Set of 3 ceramic plant pots with drainage holes and saucers, various sizes.",
+    "tags": ["Plant Pots", "Ceramic", "Set of 3", "Drainage", "Various Sizes"],
+    "category": "Home & Kitchen",
+    "price": 34.99,
+    "imageUrl": "https://placehold.co/600x600/228B22/ffffff?text=Plant+Pots",
+    "reviews": [
+      { "rating": 5, "user": "Plant Parent", "comment": "Beautiful pots, perfect for my indoor plants!" },
+      { "rating": 4, "user": "Garden Lover", "comment": "Good quality ceramic and great drainage." }
+    ]
+  },
+  {
+    "id": "WIRELESS_CHARGER",
+    "title": "Fast Wireless Charger",
+    "brand": "ChargeTech",
+    "description": "15W fast wireless charger compatible with all Qi-enabled devices.",
+    "tags": ["Wireless Charger", "Fast Charging", "15W", "Qi-enabled", "Universal"],
+    "category": "Electronics",
+    "price": 29.99,
+    "imageUrl": "https://placehold.co/600x600/000000/ffffff?text=Wireless+Charger",
+    "reviews": [
+      { "rating": 5, "user": "Tech Enthusiast", "comment": "Charges my phone super fast!" },
+      { "rating": 4, "user": "Convenience Seeker", "comment": "So convenient, no more cables." }
+    ]
+  },
+  {
+    "id": "BATH_TOWEL_SET",
+    "title": "Luxury Bath Towel Set",
+    "brand": "SoftTouch",
+    "description": "6-piece luxury bath towel set made from 100% Turkish cotton, ultra-soft.",
+    "tags": ["Bath Towels", "Luxury", "6-piece", "Turkish Cotton", "Ultra-soft"],
+    "category": "Home & Kitchen",
+    "price": 69.99,
+    "imageUrl": "https://placehold.co/600x600/87CEEB/ffffff?text=Towel+Set",
+    "reviews": [
+      { "rating": 5, "user": "Luxury Lover", "comment": "Incredibly soft and absorbent!" },
+      { "rating": 4, "user": "Quality Seeker", "comment": "Great quality towels, worth the investment." }
+    ]
+  },
+  {
+    "id": "RESISTANCE_BANDS",
+    "title": "Resistance Bands Set",
+    "brand": "FitBand",
+    "description": "Complete resistance bands set with 5 different resistance levels and accessories.",
+    "tags": ["Resistance Bands", "Fitness", "5 Levels", "Complete Set", "Accessories"],
+    "category": "Sports & Fitness",
+    "price": 29.99,
+    "imageUrl": "https://placehold.co/600x600/FF4500/ffffff?text=Resistance+Bands",
+    "reviews": [
+      { "rating": 5, "user": "Fitness Enthusiast", "comment": "Great for home workouts!" },
+      { "rating": 4, "user": "Personal Trainer", "comment": "Good quality bands, versatile exercises." }
+    ]
+  },
+  {
+    "id": "ESSENTIAL_OILS",
+    "title": "Essential Oils Gift Set",
+    "brand": "AromaBliss",
+    "description": "10-piece essential oils gift set with popular scents for aromatherapy and relaxation.",
+    "tags": ["Essential Oils", "Gift Set", "10-piece", "Aromatherapy", "Relaxation"],
+    "category": "Health & Beauty",
+    "price": 39.99,
+    "imageUrl": "https://placehold.co/600x600/9370DB/ffffff?text=Essential+Oils",
+    "reviews": [
+      { "rating": 5, "user": "Aromatherapy Fan", "comment": "Beautiful scents and great quality!" },
+      { "rating": 4, "user": "Relaxation Seeker", "comment": "Perfect for creating a calming atmosphere." }
+    ]
+  },
+  {
+    "id": "PHONE_CASE",
+    "title": "Protective Phone Case",
+    "brand": "ShieldTech",
+    "description": "Heavy-duty protective phone case with shock absorption and screen protection.",
+    "tags": ["Phone Case", "Protective", "Heavy-duty", "Shock Absorption", "Screen Protection"],
+    "category": "Electronics",
+    "price": 24.99,
+    "imageUrl": "https://placehold.co/600x600/000000/ffffff?text=Phone+Case",
+    "reviews": [
+      { "rating": 5, "user": "Clumsy User", "comment": "Saved my phone from multiple drops!" },
+      { "rating": 4, "user": "Active Person", "comment": "Great protection for outdoor activities." }
+    ]
+  },
+  {
+    "id": "BOARD_GAME",
+    "title": "Strategy Board Game",
+    "brand": "GameNight",
+    "description": "Award-winning strategy board game for 2-4 players, ages 12 and up.",
+    "tags": ["Board Game", "Strategy", "2-4 Players", "Ages 12+", "Award-winning"],
+    "category": "Toys & Games",
+    "price": 44.99,
+    "imageUrl": "https://placehold.co/600x600/FF6347/ffffff?text=Board+Game",
+    "reviews": [
+      { "rating": 5, "user": "Game Enthusiast", "comment": "Fantastic game, hours of fun!" },
+      { "rating": 4, "user": "Family Player", "comment": "Great for family game nights." }
+    ]
+  },
+  {
+    "id": "WATER_BOTTLE",
+    "title": "Insulated Water Bottle",
+    "brand": "HydroMax",
+    "description": "32oz insulated stainless steel water bottle that keeps drinks cold for 24 hours.",
+    "tags": ["Water Bottle", "Insulated", "32oz", "Stainless Steel", "24 Hours Cold"],
+    "category": "Sports & Fitness",
+    "price": 34.99,
+    "imageUrl": "https://placehold.co/600x600/4169E1/ffffff?text=Water+Bottle",
+    "reviews": [
+      { "rating": 5, "user": "Hydration Fan", "comment": "Keeps water ice cold all day!" },
+      { "rating": 4, "user": "Gym Goer", "comment": "Perfect size and great insulation." }
+    ]
+  },
+  {
+    "id": "CANDLE_SET",
+    "title": "Scented Candle Set",
+    "brand": "CozyCandleCo",
+    "description": "Set of 4 luxury scented candles with 40-hour burn time each, various fragrances.",
+    "tags": ["Candles", "Scented", "Set of 4", "Luxury", "40-hour Burn"],
+    "category": "Home & Kitchen",
+    "price": 49.99,
+    "imageUrl": "https://placehold.co/600x600/FFB6C1/000000?text=Candle+Set",
+    "reviews": [
+      { "rating": 5, "user": "Ambiance Lover", "comment": "Beautiful scents and long-lasting!" },
+      { "rating": 4, "user": "Home Decorator", "comment": "Perfect for creating a cozy atmosphere." }
+    ]
+  },
+  {
+    "id": "LAPTOP_STAND",
+    "title": "Adjustable Laptop Stand",
+    "brand": "ErgoTech",
+    "description": "Aluminum adjustable laptop stand with cooling ventilation and ergonomic design.",
+    "tags": ["Laptop Stand", "Adjustable", "Aluminum", "Cooling", "Ergonomic"],
+    "category": "Electronics",
+    "price": 59.99,
+    "imageUrl": "https://placehold.co/600x600/C0C0C0/000000?text=Laptop+Stand",
+    "reviews": [
+      { "rating": 5, "user": "Remote Worker", "comment": "Perfect height and great for posture!" },
+      { "rating": 4, "user": "Student", "comment": "Sturdy and helps keep laptop cool." }
+    ]
+  },
+  {
+    "id": "THROW_PILLOW",
+    "title": "Decorative Throw Pillows",
+    "brand": "ComfortHome",
+    "description": "Set of 2 decorative throw pillows with removable covers, 18x18 inches.",
+    "tags": ["Throw Pillows", "Decorative", "Set of 2", "Removable Covers", "18x18"],
+    "category": "Home & Kitchen",
+    "price": 39.99,
+    "imageUrl": "https://placehold.co/600x600/DDA0DD/ffffff?text=Throw+Pillows",
+    "reviews": [
+      { "rating": 5, "user": "Interior Designer", "comment": "Beautiful pillows, great quality fabric!" },
+      { "rating": 4, "user": "Home Owner", "comment": "Perfect accent pieces for my sofa." }
+    ]
+  },
+  {
+    "id": "MENS_SNEAKERS",
+    "title": "Men's Casual Sneakers",
+    "brand": "ComfortStep",
+    "description": "Comfortable casual sneakers with memory foam insole and breathable mesh upper.",
+    "tags": ["Sneakers", "Casual", "Memory Foam", "Breathable", "Comfortable"],
+    "category": "Apparel",
+    "price": 79.99,
+    "imageUrl": "https://placehold.co/600x600/FFFFFF/000000?text=Mens+Sneakers",
+    "reviews": [
+      { "rating": 5, "user": "Comfort Seeker", "comment": "Most comfortable sneakers I've ever worn!" },
+      { "rating": 4, "user": "Daily Walker", "comment": "Great for everyday wear and walking." }
+    ]
+  },
+  {
+    "id": "KITCHEN_SCALE",
+    "title": "Digital Kitchen Scale",
+    "brand": "PrecisionCook",
+    "description": "Digital kitchen scale with LCD display, precise measurements up to 11 lbs.",
+    "tags": ["Kitchen Scale", "Digital", "LCD Display", "Precise", "11 lbs Capacity"],
+    "category": "Home & Kitchen",
+    "price": 29.99,
+    "imageUrl": "https://placehold.co/600x600/000000/ffffff?text=Kitchen+Scale",
+    "reviews": [
+      { "rating": 5, "user": "Baker", "comment": "Perfect for baking, very accurate!" },
+      { "rating": 4, "user": "Health Conscious", "comment": "Great for portion control." }
+    ]
+  },
+  {
+    "id": "WOMENS_HANDBAG",
+    "title": "Women's Leather Handbag",
+    "brand": "StyleBag",
+    "description": "Elegant leather handbag with multiple compartments and adjustable shoulder strap.",
+    "tags": ["Handbag", "Leather", "Multiple Compartments", "Adjustable Strap", "Elegant"],
+    "category": "Accessories",
+    "price": 89.99,
+    "imageUrl": "https://placehold.co/600x600/8B4513/ffffff?text=Handbag",
+    "reviews": [
+      { "rating": 5, "user": "Fashion Enthusiast", "comment": "Beautiful bag, goes with everything!" },
+      { "rating": 4, "user": "Professional Woman", "comment": "Perfect size for work and daily use." }
+    ]
+  },
+  {
+    "id": "DESK_ORGANIZER",
+    "title": "Bamboo Desk Organizer",
+    "brand": "EcoOffice",
+    "description": "Eco-friendly bamboo desk organizer with multiple compartments for office supplies.",
+    "tags": ["Desk Organizer", "Bamboo", "Eco-friendly", "Multiple Compartments", "Office"],
+    "category": "Home & Kitchen",
+    "price": 34.99,
+    "imageUrl": "https://placehold.co/600x600/DEB887/000000?text=Desk+Organizer",
+    "reviews": [
+      { "rating": 5, "user": "Organized Person", "comment": "Perfect for keeping my desk tidy!" },
+      { "rating": 4, "user": "Eco Conscious", "comment": "Love that it's made from sustainable bamboo." }
+    ]
+  },
+  {
+    "id": "BLUETOOTH_EARBUDS",
+    "title": "True Wireless Earbuds",
+    "brand": "SoundPro",
+    "description": "True wireless earbuds with noise cancellation and 24-hour battery life with case.",
+    "tags": ["Earbuds", "Wireless", "Noise Cancellation", "24-hour Battery", "True Wireless"],
+    "category": "Electronics",
+    "price": 129.99,
+    "imageUrl": "https://placehold.co/600x600/000000/ffffff?text=Earbuds",
+    "reviews": [
+      { "rating": 5, "user": "Music Lover", "comment": "Amazing sound quality and battery life!" },
+      { "rating": 4, "user": "Commuter", "comment": "Perfect for daily commute, great noise cancellation." }
+    ]
+  },
+  {
+    "id": "PICTURE_FRAMES",
+    "title": "Photo Frame Set",
+    "brand": "MemoryKeeper",
+    "description": "Set of 6 wooden photo frames in various sizes for displaying family photos.",
+    "tags": ["Photo Frames", "Wooden", "Set of 6", "Various Sizes", "Family Photos"],
+    "category": "Home & Kitchen",
+    "price": 44.99,
+    "imageUrl": "https://placehold.co/600x600/8B4513/ffffff?text=Photo+Frames",
+    "reviews": [
+      { "rating": 5, "user": "Family Person", "comment": "Beautiful frames, perfect for displaying memories!" },
+      { "rating": 4, "user": "Home Decorator", "comment": "Great quality wood and various sizes." }
+    ]
+  },
+  {
+    "id": "PROTEIN_BARS",
+    "title": "Protein Bar Variety Pack",
+    "brand": "NutriBar",
+    "description": "Pack of 12 protein bars with 20g protein each, 4 different flavors.",
+    "tags": ["Protein Bars", "Variety Pack", "20g Protein", "12 Pack", "4 Flavors"],
+    "category": "Health & Beauty",
+    "price": 24.99,
+    "imageUrl": "https://placehold.co/600x600/8B4513/ffffff?text=Protein+Bars",
+    "reviews": [
+      { "rating": 5, "user": "Fitness Fan", "comment": "Great taste and perfect post-workout snack!" },
+      { "rating": 4, "user": "Busy Professional", "comment": "Convenient and nutritious on-the-go option." }
+    ]
+  },
+  {
+    "id": "SHOWER_CURTAIN",
+    "title": "Waterproof Shower Curtain",
+    "brand": "BathStyle",
+    "description": "Elegant waterproof shower curtain with modern design and rust-resistant grommets.",
+    "tags": ["Shower Curtain", "Waterproof", "Modern Design", "Rust-resistant", "Elegant"],
+    "category": "Home & Kitchen",
+    "price": 19.99,
+    "imageUrl": "https://placehold.co/600x600/87CEEB/ffffff?text=Shower+Curtain",
+    "reviews": [
+      { "rating": 5, "user": "Bathroom Renovator", "comment": "Beautiful design and completely waterproof!" },
+      { "rating": 4, "user": "Home Owner", "comment": "Great quality and easy to clean." }
+    ]
+  },
+  {
+    "id": "GAMING_KEYBOARD",
+    "title": "Mechanical Gaming Keyboard",
+    "brand": "GameTech",
+    "description": "RGB backlit mechanical gaming keyboard with customizable keys and anti-ghosting.",
+    "tags": ["Gaming Keyboard", "Mechanical", "RGB Backlit", "Customizable", "Anti-ghosting"],
+    "category": "Electronics",
+    "price": 89.99,
+    "imageUrl": "https://placehold.co/600x600/000000/ffffff?text=Gaming+Keyboard",
+    "reviews": [
+      { "rating": 5, "user": "Pro Gamer", "comment": "Excellent response time and beautiful RGB lighting!" },
+      { "rating": 4, "user": "Typing Enthusiast", "comment": "Great tactile feel and build quality." }
+    ]
+  },
+  {
+    "id": "FACE_MASK_SET",
+    "title": "Hydrating Face Mask Set",
+    "brand": "SkinCare Plus",
+    "description": "Set of 10 hydrating face masks with hyaluronic acid and natural ingredients.",
+    "tags": ["Face Masks", "Hydrating", "Set of 10", "Hyaluronic Acid", "Natural"],
+    "category": "Health & Beauty",
+    "price": 29.99,
+    "imageUrl": "https://placehold.co/600x600/FFB6C1/000000?text=Face+Masks",
+    "reviews": [
+      { "rating": 5, "user": "Skincare Addict", "comment": "My skin feels so hydrated and smooth!" },
+      { "rating": 4, "user": "Beauty Lover", "comment": "Great value for 10 masks, noticeable results." }
+    ]
+  },
+  {
+    "id": "CAR_CHARGER",
+    "title": "Fast Car Charger",
+    "brand": "AutoCharge",
+    "description": "Dual USB fast car charger with LED display and safety protection features.",
+    "tags": ["Car Charger", "Fast Charging", "Dual USB", "LED Display", "Safety Protection"],
+    "category": "Electronics",
+    "price": 19.99,
+    "imageUrl": "https://placehold.co/600x600/000000/ffffff?text=Car+Charger",
+    "reviews": [
+      { "rating": 5, "user": "Frequent Driver", "comment": "Charges my devices super fast while driving!" },
+      { "rating": 4, "user": "Road Tripper", "comment": "Essential for long trips, very reliable." }
+    ]
+  },
+  {
+    "id": "BOOKSHELF",
+    "title": "5-Tier Wooden Bookshelf",
+    "brand": "BookStorage",
+    "description": "Sturdy 5-tier wooden bookshelf with adjustable shelves and modern design.",
+    "tags": ["Bookshelf", "5-Tier", "Wooden", "Adjustable Shelves", "Modern"],
+    "category": "Furniture",
+    "price": 149.99,
+    "imageUrl": "https://placehold.co/600x600/8B4513/ffffff?text=Bookshelf",
+    "reviews": [
+      { "rating": 5, "user": "Book Lover", "comment": "Perfect for organizing my book collection!" },
+      { "rating": 4, "user": "Student", "comment": "Sturdy construction and looks great in my room." }
+    ]
+  },
+  {
+    "id": "HAIR_DRYER",
+    "title": "Professional Hair Dryer",
+    "brand": "SalonPro",
+    "description": "Professional ionic hair dryer with multiple heat settings and concentrator nozzle.",
+    "tags": ["Hair Dryer", "Professional", "Ionic", "Multiple Settings", "Concentrator"],
+    "category": "Health & Beauty",
+    "price": 79.99,
+    "imageUrl": "https://placehold.co/600x600/FF69B4/ffffff?text=Hair+Dryer",
+    "reviews": [
+      { "rating": 5, "user": "Hair Stylist", "comment": "Professional quality, dries hair quickly without damage!" },
+      { "rating": 4, "user": "Daily User", "comment": "Great performance and multiple heat options." }
+    ]
+  },
+  {
+    "id": "PUZZLE_1000",
+    "title": "1000-Piece Jigsaw Puzzle",
+    "brand": "PuzzleMaster",
+    "description": "Beautiful landscape 1000-piece jigsaw puzzle with high-quality printing.",
+    "tags": ["Jigsaw Puzzle", "1000-piece", "Landscape", "High-quality", "Beautiful"],
+    "category": "Toys & Games",
+    "price": 19.99,
+    "imageUrl": "https://placehold.co/600x600/32CD32/ffffff?text=Jigsaw+Puzzle",
+    "reviews": [
+      { "rating": 5, "user": "Puzzle Enthusiast", "comment": "Challenging and beautiful, great quality pieces!" },
+      { "rating": 4, "user": "Family Fun", "comment": "Perfect for family puzzle nights." }
+    ]
+  },
+  {
+    "id": "STORAGE_BINS",
+    "title": "Storage Bin Set",
+    "brand": "OrganizeIt",
+    "description": "Set of 6 fabric storage bins with handles, perfect for closet organization.",
+    "tags": ["Storage Bins", "Set of 6", "Fabric", "Handles", "Closet Organization"],
+    "category": "Home & Kitchen",
+    "price": 39.99,
+    "imageUrl": "https://placehold.co/600x600/708090/ffffff?text=Storage+Bins",
+    "reviews": [
+      { "rating": 5, "user": "Organization Expert", "comment": "Perfect for organizing my closet!" },
+      { "rating": 4, "user": "Neat Freak", "comment": "Great quality and the handles are very convenient." }
+    ]
+  },
+  {
+    "id": "MULTIVITAMIN",
+    "title": "Daily Multivitamin",
+    "brand": "HealthPlus",
+    "description": "Complete daily multivitamin with 23 essential vitamins and minerals, 60 tablets.",
+    "tags": ["Multivitamin", "Daily", "23 Vitamins", "Essential Minerals", "60 Tablets"],
+    "category": "Health & Beauty",
+    "price": 24.99,
+    "imageUrl": "https://placehold.co/600x600/FFA500/ffffff?text=Multivitamin",
+    "reviews": [
+      { "rating": 5, "user": "Health Conscious", "comment": "Feel more energetic since taking these!" },
+      { "rating": 4, "user": "Wellness Seeker", "comment": "Good quality vitamins, easy to swallow." }
+    ]
+  },
+  {
+    "id": "NIGHT_LIGHT",
+    "title": "LED Night Light",
+    "brand": "SoftGlow",
+    "description": "Motion sensor LED night light with adjustable brightness and warm white light.",
+    "tags": ["Night Light", "LED", "Motion Sensor", "Adjustable Brightness", "Warm White"],
+    "category": "Home & Kitchen",
+    "price": 14.99,
+    "imageUrl": "https://placehold.co/600x600/FFFFE0/000000?text=Night+Light",
+    "reviews": [
+      { "rating": 5, "user": "Parent", "comment": "Perfect for kids' rooms, not too bright!" },
+      { "rating": 4, "user": "Safety Conscious", "comment": "Great for hallways and bathrooms at night." }
+    ]
+  },
+  {
+    "id": "TRAVEL_PILLOW",
+    "title": "Memory Foam Travel Pillow",
+    "brand": "ComfortTravel",
+    "description": "Ergonomic memory foam travel pillow with removable washable cover.",
+    "tags": ["Travel Pillow", "Memory Foam", "Ergonomic", "Removable Cover", "Washable"],
+    "category": "Accessories",
+    "price": 29.99,
+    "imageUrl": "https://placehold.co/600x600/4169E1/ffffff?text=Travel+Pillow",
+    "reviews": [
+      { "rating": 5, "user": "Frequent Flyer", "comment": "Makes long flights so much more comfortable!" },
+      { "rating": 4, "user": "Road Tripper", "comment": "Great support and easy to pack." }
+    ]
+  },
+  {
+    "id": "SPICE_RACK",
+    "title": "Rotating Spice Rack",
+    "brand": "KitchenOrganize",
+    "description": "16-jar rotating spice rack with labels and refillable glass jars.",
+    "tags": ["Spice Rack", "Rotating", "16-jar", "Labels", "Glass Jars"],
+    "category": "Home & Kitchen",
+    "price": 49.99,
+    "imageUrl": "https://placehold.co/600x600/8B4513/ffffff?text=Spice+Rack",
+    "reviews": [
+      { "rating": 5, "user": "Home Chef", "comment": "Keeps my spices organized and easily accessible!" },
+      { "rating": 4, "user": "Cooking Enthusiast", "comment": "Great space saver and the jars are good quality." }
+    ]
+  },
+  {
+    "id": "DESK_FAN",
+    "title": "USB Desk Fan",
+    "brand": "CoolBreeze",
+    "description": "Quiet USB desk fan with adjustable speed and 360-degree rotation.",
+    "tags": ["Desk Fan", "USB", "Quiet", "Adjustable Speed", "360-degree Rotation"],
+    "category": "Electronics",
+    "price": 24.99,
+    "imageUrl": "https://placehold.co/600x600/87CEEB/ffffff?text=Desk+Fan",
+    "reviews": [
+      { "rating": 5, "user": "Office Worker", "comment": "Perfect for my desk, very quiet operation!" },
+      { "rating": 4, "user": "Student", "comment": "Great for keeping cool while studying." }
+    ]
+  },
+  {
+    "id": "JEWELRY_BOX",
+    "title": "Wooden Jewelry Box",
+    "brand": "ElegantStorage",
+    "description": "Handcrafted wooden jewelry box with velvet lining and multiple compartments.",
+    "tags": ["Jewelry Box", "Wooden", "Handcrafted", "Velvet Lining", "Multiple Compartments"],
+    "category": "Accessories",
+    "price": 59.99,
+    "imageUrl": "https://placehold.co/600x600/8B4513/ffffff?text=Jewelry+Box",
+    "reviews": [
+      { "rating": 5, "user": "Jewelry Lover", "comment": "Beautiful craftsmanship and perfect for organizing!" },
+      { "rating": 4, "user": "Gift Giver", "comment": "Makes a wonderful gift, very elegant." }
+    ]
+  },
+  {
+    "id": "LUNCH_BOX",
+    "title": "Insulated Lunch Box",
+    "brand": "FreshKeep",
+    "description": "Insulated lunch box with multiple compartments and leak-proof containers.",
+    "tags": ["Lunch Box", "Insulated", "Multiple Compartments", "Leak-proof", "Containers"],
+    "category": "Home & Kitchen",
+    "price": 34.99,
+    "imageUrl": "https://placehold.co/600x600/32CD32/ffffff?text=Lunch+Box",
+    "reviews": [
+      { "rating": 5, "user": "Working Parent", "comment": "Keeps food fresh and organized perfectly!" },
+      { "rating": 4, "user": "Student", "comment": "Great for school lunches, easy to clean." }
+    ]
+  },
+  {
+    "id": "ALARM_CLOCK",
+    "title": "Digital Alarm Clock",
+    "brand": "TimeKeeper",
+    "description": "Digital alarm clock with large LED display, USB charging port, and snooze function.",
+    "tags": ["Alarm Clock", "Digital", "LED Display", "USB Charging", "Snooze"],
+    "category": "Electronics",
+    "price": 29.99,
+    "imageUrl": "https://placehold.co/600x600/000000/ffffff?text=Alarm+Clock",
+    "reviews": [
+      { "rating": 5, "user": "Heavy Sleeper", "comment": "Loud enough to wake me up and the display is perfect!" },
+      { "rating": 4, "user": "Bedside User", "comment": "Great features and the USB port is very handy." }
+    ]
+  },
+  {
+    "id": "GARDEN_TOOLS",
+    "title": "Garden Tool Set",
+    "brand": "GreenThumb",
+    "description": "5-piece garden tool set with ergonomic handles and storage bag.",
+    "tags": ["Garden Tools", "5-piece", "Ergonomic Handles", "Storage Bag", "Gardening"],
+    "category": "Sports & Fitness",
+    "price": 39.99,
+    "imageUrl": "https://placehold.co/600x600/228B22/ffffff?text=Garden+Tools",
+    "reviews": [
+      { "rating": 5, "user": "Gardener", "comment": "High quality tools, perfect for my garden!" },
+      { "rating": 4, "user": "Plant Parent", "comment": "Great starter set for indoor and outdoor plants." }
+    ]
+  },
+  {
+    "id": "FLOOR_LAMP",
+    "title": "Modern Floor Lamp",
+    "brand": "LightStyle",
+    "description": "Modern floor lamp with adjustable height and warm LED lighting.",
+    "tags": ["Floor Lamp", "Modern", "Adjustable Height", "LED", "Warm Lighting"],
+    "category": "Home & Kitchen",
+    "price": 89.99,
+    "imageUrl": "https://placehold.co/600x600/FFD700/000000?text=Floor+Lamp",
+    "reviews": [
+      { "rating": 5, "user": "Interior Designer", "comment": "Beautiful lamp, perfect lighting for any room!" },
+      { "rating": 4, "user": "Reading Enthusiast", "comment": "Great for reading, adjustable height is perfect." }
+    ]
+  },
+  {
+    "id": "CUTTING_BOARD",
+    "title": "Bamboo Cutting Board Set",
+    "brand": "EcoKitchen",
+    "description": "Set of 3 bamboo cutting boards in different sizes with juice grooves.",
+    "tags": ["Cutting Board", "Bamboo", "Set of 3", "Different Sizes", "Juice Grooves"],
+    "category": "Home & Kitchen",
+    "price": 34.99,
+    "imageUrl": "https://placehold.co/600x600/DEB887/000000?text=Cutting+Board",
+    "reviews": [
+      { "rating": 5, "user": "Home Cook", "comment": "Great quality bamboo, perfect sizes for different tasks!" },
+      { "rating": 4, "user": "Eco Conscious", "comment": "Love that they're sustainable and well-made." }
+    ]
+  },
+  {
+    "id": "SHOE_RACK",
+    "title": "3-Tier Shoe Rack",
+    "brand": "OrganizeShoes",
+    "description": "Sturdy 3-tier shoe rack that holds up to 12 pairs of shoes.",
+    "tags": ["Shoe Rack", "3-Tier", "Sturdy", "12 Pairs", "Organization"],
+    "category": "Home & Kitchen",
+    "price": 29.99,
+    "imageUrl": "https://placehold.co/600x600/8B4513/ffffff?text=Shoe+Rack",
+    "reviews": [
+      { "rating": 5, "user": "Shoe Collector", "comment": "Perfect for organizing my shoe collection!" },
+      { "rating": 4, "user": "Neat Person", "comment": "Sturdy construction and saves space." }
+    ]
+  },
+  {
+    "id": "HAND_CREAM",
+    "title": "Moisturizing Hand Cream Set",
+    "brand": "SoftHands",
+    "description": "Set of 3 moisturizing hand creams with different scents and natural ingredients.",
+    "tags": ["Hand Cream", "Moisturizing", "Set of 3", "Different Scents", "Natural"],
+    "category": "Health & Beauty",
+    "price": 19.99,
+    "imageUrl": "https://placehold.co/600x600/FFB6C1/000000?text=Hand+Cream",
+    "reviews": [
+      { "rating": 5, "user": "Dry Skin Sufferer", "comment": "Amazing moisturizing power, hands feel so soft!" },
+      { "rating": 4, "user": "Scent Lover", "comment": "Beautiful scents and great for daily use." }
+    ]
+  },
+  {
+    "id": "WALL_CLOCK",
+    "title": "Modern Wall Clock",
+    "brand": "TimeStyle",
+    "description": "Silent modern wall clock with large numbers and minimalist design.",
+    "tags": ["Wall Clock", "Modern", "Silent", "Large Numbers", "Minimalist"],
+    "category": "Home & Kitchen",
+    "price": 39.99,
+    "imageUrl": "https://placehold.co/600x600/000000/ffffff?text=Wall+Clock",
+    "reviews": [
+      { "rating": 5, "user": "Design Enthusiast", "comment": "Perfect minimalist design, completely silent!" },
+      { "rating": 4, "user": "Office Manager", "comment": "Great for office spaces, easy to read." }
+    ]
+  },
+  {
+    "id": "BIKE_HELMET",
+    "title": "Safety Bike Helmet",
+    "brand": "SafeRide",
+    "description": "Lightweight bike helmet with adjustable fit and ventilation system.",
+    "tags": ["Bike Helmet", "Safety", "Lightweight", "Adjustable Fit", "Ventilation"],
+    "category": "Sports & Fitness",
+    "price": 49.99,
+    "imageUrl": "https://placehold.co/600x600/FF0000/ffffff?text=Bike+Helmet",
+    "reviews": [
+      { "rating": 5, "user": "Cyclist", "comment": "Comfortable and safe, great ventilation!" },
+      { "rating": 4, "user": "Safety First", "comment": "Well-made helmet, fits perfectly." }
+    ]
+  },
+  {
+    "id": "TEA_SET",
+    "title": "Ceramic Tea Set",
+    "brand": "TeaTime",
+    "description": "6-piece ceramic tea set with teapot, cups, and saucers in elegant design.",
+    "tags": ["Tea Set", "Ceramic", "6-piece", "Teapot", "Elegant Design"],
+    "category": "Home & Kitchen",
+    "price": 59.99,
+    "imageUrl": "https://placehold.co/600x600/E6E6FA/000000?text=Tea+Set",
+    "reviews": [
+      { "rating": 5, "user": "Tea Enthusiast", "comment": "Beautiful set, perfect for afternoon tea!" },
+      { "rating": 4, "user": "Host", "comment": "Elegant and great for entertaining guests." }
+    ]
+  },
+  {
+    "id": "LAPTOP_BAG",
+    "title": "Professional Laptop Bag",
+    "brand": "BusinessCarry",
+    "description": "Professional laptop bag with padded compartment and multiple pockets.",
+    "tags": ["Laptop Bag", "Professional", "Padded", "Multiple Pockets", "Business"],
+    "category": "Accessories",
+    "price": 79.99,
+    "imageUrl": "https://placehold.co/600x600/000000/ffffff?text=Laptop+Bag",
+    "reviews": [
+      { "rating": 5, "user": "Business Professional", "comment": "Perfect for work, great protection and style!" },
+      { "rating": 4, "user": "Student", "comment": "Lots of space and well-organized compartments." }
+    ]
+  }
+]
